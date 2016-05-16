@@ -256,18 +256,19 @@ class DemoDialog(QDialog):
             Dispatcher(self.fetched), 'gui_convert', args=args,
             description='Fetch article from Wikipedia')
         job.extra_conversion_args = (temp_files, fmt)
-        if isinstance(urls, list):
-            info_dialog(
-                self, 'Downloading',
-                'Downloading %d article(s) from Wikipedia. When the download'
-                ' completes the book will be added to your calibre library.'
-                % len(urls), show=True, show_copy_button=False)
-        else:
-            info_dialog(
-                self, 'Downloading',
-                'Downloading book from Wikipedia. When the download'
-                ' completes the book will be added to your calibre library.',
-                show=True, show_copy_button=False)
+        # don't prompt if all OK
+        # if isinstance(urls, list):
+        #     info_dialog(
+        #         self, 'Downloading',
+        #         'Downloading %d article(s) from Wikipedia. When the download'
+        #         ' completes the book will be added to your calibre library.'
+        #         % len(urls), show=True, show_copy_button=False)
+        # else:
+        #     info_dialog(
+        #         self, 'Downloading',
+        #         'Downloading book from Wikipedia. When the download'
+        #         ' completes the book will be added to your calibre library.',
+        #         show=True, show_copy_button=False)
 
     def fetched(self, job):
         if job.failed:
@@ -280,4 +281,5 @@ class DemoDialog(QDialog):
                 os.remove(f.name)
             except:
                 pass
-        self.gui.status_bar.show_message('Wikipedia articles fetched.', 3000)
+        # don't prompt if all OK
+        # self.gui.status_bar.show_message('Wikipedia articles fetched.', 3000)
