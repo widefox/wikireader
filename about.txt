@@ -1,0 +1,7 @@
+The Wiki Reader
+===========================
+
+Created by Krittika Goyal
+
+Requires calibre >= 0.7.53
+
