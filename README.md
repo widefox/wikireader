@@ -10,7 +10,8 @@ Requires calibre >= 0.7.53
 
 ## Changes
 
-Modified for simpler and quicker use by removing the popup dialog boxes
+Modified for simpler and quicker use by removing the popup dialogue boxes
+
 By Johnathon Weare 2016
 
 ## Licence
