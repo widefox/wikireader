@@ -5,3 +5,4 @@ Created by Krittika Goyal
 
 Requires calibre >= 0.7.53
 
+Modified by Johnathon Weare
